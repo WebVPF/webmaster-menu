@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    color: #cecece;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    background: #3b3f46;
+}
+.container {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, transparent));
+}
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.item__settings {
+    display: flex;
+    margin-bottom: 15px;
+}
+.switch {
+    position: relative;
+    height: 26px;
+    width: 120px;
+    margin-right: 20px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 58px;
+    line-height: 26px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+.switch-label:active {
+    font-weight: bold;
+}
+.switch-label-on {
+    padding-left: 2px;
+}
+.switch-label-off {
+    padding-right: 2px;
+}
+.switch-input {
+    display: none;
+}
+.switch-input:checked + .switch-label {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    transition: 0.15s ease-out;
+    transition-property: color, text-shadow;
+}
+.switch-input:checked + .switch-label-off ~ .switch-selection {
+    left: 60px;
+    background-image: -webkit-linear-gradient(top, #ef0101, #ab0700);
+}
+.switch-selection {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 58px;
+    height: 22px;
+    border-radius: 3px;
+    background-color: #65bd63;
+    background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    transition: left 0.15s ease-out;
+}
+#save {
+    display: block;
+    margin: 30px auto;
+    background: #17777a;
+    padding: 10px 20px;
+    color: #b5b5b5;
+    font-size: 17px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+}
+#save:hover {
+    background: #0e6b6e;
+    color: #dadada;
+}
+#status {
+    display: none;
+    position: fixed;
+    width: 300px;
+    top: 50px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 15px;
+    text-align: center;
+    background: darkgreen;
+    border: solid 2px #b6b6b6;
+    border-radius: 6px;
+}

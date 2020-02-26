@@ -1,0 +1,21 @@
+{
+    "extName": {"message": "Меню вебмастера"},
+    "extDescription": {"message": "Добавляет в контекстное меню браузера новые пункты открывающие различные анализы просматриваемых веб-страниц и сайтов."},
+
+    "itemsMenu_pagespeed": {"message": "PageSpeed - Скорость страницы"},
+    "itemsMenu_validHTML": {"message": "Валидатор HTML"},
+    "itemsMenu_validCSS": {"message": "Валидатор CSS"},
+    "itemsMenu_structuredData": {"message": "Валидатор микроразметки"},
+    "itemsMenu_icons": {"message": "Проверка иконок сайта"},
+    "itemsMenu_yandexIKS": {"message": "Яндекс ИКС сайта"},
+    "itemsMenu_alexaRanks": {"message": "Alexa Traffic Ranks"},
+    "itemsMenu_searchGoogle": {"message": "Страницы сайта в поиске Google"},
+    "itemsMenu_searchYandex": {"message": "Страницы сайта в поиске Яндекс"},
+
+    "settingsTitle": {"message": "Настройки - Контекстное меню вебмастера"},
+    "settingsH1": {"message": "Пункты меню"},
+    "settingsLabelOn": {"message": "ВКЛ"},
+    "settingsLabelOff": {"message": "ВЫКЛ"},
+    "settingsBtnSave": {"message": "Сохранить настройки"},
+    "settingsSaveStatus": {"message": "Настройки сохранены"}
+}

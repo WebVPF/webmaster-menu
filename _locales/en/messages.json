@@ -1,0 +1,21 @@
+{
+    "extName": {"message": "Webmaster menu"},
+    "extDescription": {"message": "Adds new items to browser context menu that open various analyzes of browsed web pages and sites."},
+    
+    "itemsMenu_pagespeed": {"message": "Open Google PageSpeed"},
+    "itemsMenu_validHTML": {"message": "HTML validator"},
+    "itemsMenu_validCSS": {"message": "CSS validator"},
+    "itemsMenu_structuredData": {"message": "StructuredData validator"},
+    "itemsMenu_icons": {"message": "Check site icons"},
+    "itemsMenu_yandexIKS": {"message": "Yandex IKS site"},
+    "itemsMenu_alexaRanks": {"message": "Alexa Traffic Ranks"},
+    "itemsMenu_searchGoogle": {"message": "Pages site in Google Search"},
+    "itemsMenu_searchYandex": {"message": "Pages site in Yandex Search"},
+
+    "settingsTitle": {"message": "Options - Webmaster context menu"},
+    "settingsH1": {"message": "Menu items"},
+    "settingsLabelOn": {"message": "ON"},
+    "settingsLabelOff": {"message": "OFF"},
+    "settingsBtnSave": {"message": "Save settings"},
+    "settingsSaveStatus": {"message": "Options saved"}
+}
