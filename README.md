@@ -5,7 +5,7 @@
 
 **Extension for Browser Chrome**
 
-Chrome Market Extension Page: <a href="https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc" target="_blank">https://chrome.google.com</a>
+Chrome Market Extension Page: <a href="https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc" target="_blank">chrome.google.com</a>
 
 The WEBMASTER MENU extension adds menu items to the browser context menu that open the analysis of viewed web pages in various validators and services.
 
@@ -30,7 +30,7 @@ In the extension options you can enable/disable the items you need from this men
 
 Расширение МЕНЮ ВЕБМАСТЕРА добавляет в контекстное меню браузера пункты меню, открывающие анализ просматриваемых веб-страниц в различных валидаторах и сервисах.
 
-Страница расширения в маркете Chrome: <a href="https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc" target="_blank">https://chrome.google.com</a>
+Страница расширения в маркете Chrome: <a href="https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc" target="_blank">chrome.google.com</a>
 
 Список доступных пунктов для контекстного меню браузера:
 - PageSpeed - скорость страницы
