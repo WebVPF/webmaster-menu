@@ -1,6 +1,6 @@
 const itemsId = ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex'];
 
-function webPageAnalysis (info, tab) {
+function openPageAnalysis (info, tab) {
     let url,
         paramsUrl = tab.url.match(/(^https?):\/\/(([^/]+).*)/); // [url, protocol, patch, domen]
 
@@ -38,7 +38,7 @@ function createItemsMenu() {
 
 createItemsMenu();
 
-chrome.contextMenus.onClicked.addListener(webPageAnalysis);
+chrome.contextMenus.onClicked.addListener(openPageAnalysis);
 
 /**
  * Слушатель изменения настроек
