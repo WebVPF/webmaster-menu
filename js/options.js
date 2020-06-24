@@ -1,5 +1,5 @@
 const optionsApp = {
-    keyId: ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex'],
+    keyId: ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex', 'robotsTxt'],
     $btnSave: document.querySelector('#save'),
     
     event() {

@@ -1,4 +1,4 @@
-const itemsId = ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex'];
+const itemsId = ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex', 'robotsTxt'];
 
 function openPageAnalysis (info, tab) {
     let url,
@@ -14,6 +14,7 @@ function openPageAnalysis (info, tab) {
         case 'alexaRanks':      url = `https://www.alexa.com/siteinfo/${paramsUrl[3]}`; break;
         case 'searchGoogle':    url = `https://www.google.com/search?q=site:${paramsUrl[3]}`; break;
         case 'searchYandex':    url = `https://yandex.ru/search/?text=site:${paramsUrl[3]}`; break;
+        case 'robotsTxt':       url = `${paramsUrl[1]}://${paramsUrl[3]}/robots.txt`; break;
     }
 
     if (url) window.open(url);

@@ -11,6 +11,7 @@
     "itemsMenu_alexaRanks": {"message": "Alexa Traffic Ranks"},
     "itemsMenu_searchGoogle": {"message": "Страницы сайта в поиске Google"},
     "itemsMenu_searchYandex": {"message": "Страницы сайта в поиске Яндекс"},
+    "itemsMenu_robotsTxt": {"message": "Открыть robots.txt"},
 
     "settingsTitle": {"message": "Настройки - Контекстное меню вебмастера"},
     "settingsH1": {"message": "Пункты меню"},

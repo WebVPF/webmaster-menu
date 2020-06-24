@@ -1,13 +1,10 @@
 # Webmaster Menu
 
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Web-VPF/webmaster-menu?logo=github)
-![Chrome Web Store](https://img.shields.io/chrome-web-store/users/bjnkfhenfiekcfbkgpkblcbldphjkldc?label=Crome%20users&logo=google%20chrome&logoColor=%23dadada)
-
 **Extension for Browser Chrome**
 
 Chrome Market Extension Page: [chrome.google.com](https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc)
 
-Browsers Opera and Yandex: [addons.opera.com](https://addons.opera.com/ru/extensions/details/webmaster-menu/)
+For browsers Opera and Yandex: [addons.opera.com](https://addons.opera.com/ru/extensions/details/webmaster-menu/)
 
 The WEBMASTER MENU extension adds menu items to the browser context menu that open the analysis of viewed web pages in various validators and services.
 
@@ -21,6 +18,7 @@ List of available items for the browser context menu:
 - Alexa Traffic Ranks
 - Pages site in Google Search
 - Pages site in Yandex Search
+- Open robots.txt
 
 In the extension options you can enable/disable the items you need from this menu.
 
@@ -34,7 +32,7 @@ In the extension options you can enable/disable the items you need from this men
 
 Страница расширения в маркете Chrome: [chrome.google.com](https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc)
 
-Браузеры Opera и Яндекс: [addons.opera.com](https://addons.opera.com/ru/extensions/details/webmaster-menu/)
+Для браузеров Opera и Яндекс: [addons.opera.com](https://addons.opera.com/ru/extensions/details/webmaster-menu/)
 
 Список доступных пунктов для контекстного меню браузера:
 - PageSpeed - скорость страницы
@@ -46,6 +44,7 @@ In the extension options you can enable/disable the items you need from this men
 - Alexa Traffic Ranks
 - Страницы сайта в поиске Google
 - Страницы сайта в поиске Яндекс
+- Открыть robots.txt
 
 ![контекстное меню браузера](https://lh3.googleusercontent.com/otDmxlCv3gh5rjstuz94cSVpgYmdXXexFK2RKXz6kZoS-hNGho1MhYrk0yRzbk0NyIU6qSgeYA=w640-h400-e365)
 

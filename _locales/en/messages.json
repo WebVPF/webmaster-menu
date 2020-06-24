@@ -11,6 +11,7 @@
     "itemsMenu_alexaRanks": {"message": "Alexa Traffic Ranks"},
     "itemsMenu_searchGoogle": {"message": "Pages site in Google Search"},
     "itemsMenu_searchYandex": {"message": "Pages site in Yandex Search"},
+    "itemsMenu_robotsTxt": {"message": "Open robots.txt"},
 
     "settingsTitle": {"message": "Options - Webmaster context menu"},
     "settingsH1": {"message": "Menu items"},
