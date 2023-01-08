@@ -22,4 +22,4 @@ List of available items for the browser context menu:
 
 In the extension options you can enable/disable the items you need from this menu.
 
-![options webmaster menu](https://lh3.googleusercontent.com/CAkrXGVBgZH_-7PKzK9338vZetA4AyMwFIat5CPfhljydx6oZojDP4E3ZLTYOZZJt8JUrcSr-w=w640-h400-e365)
+![settings webmaster menu](https://raw.githubusercontent.com/WebVPF/webmaster-menu/master/img/screen-settings.jpg)
