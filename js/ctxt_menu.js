@@ -1,4 +1,15 @@
-const itemsId = ['pagespeed', 'validHTML', 'validCSS', 'structuredData', 'icons', 'yandexIKS', 'alexaRanks', 'searchGoogle', 'searchYandex', 'robotsTxt'];
+const itemsId = [
+    'pagespeed',
+    'validHTML',
+    'validCSS',
+    'structuredData',
+    'icons',
+    'yandexIKS',
+    'alexaRanks',
+    'searchGoogle',
+    'searchYandex',
+    'robotsTxt'
+];
 
 function openPageAnalysis (info, tab) {
     let url,
@@ -31,7 +42,7 @@ function createItemsMenu() {
                     title: chrome.i18n.getMessage(`itemsMenu_${el}`),
                     contexts: ['all'],
                     documentUrlPatterns: ['http://*/*', 'https://*/*']
-                });
+                })
             }
         })
     })
@@ -45,3 +56,16 @@ chrome.contextMenus.onClicked.addListener(openPageAnalysis);
  * Слушатель изменения настроек
  */
 chrome.storage.onChanged.addListener(() => chrome.contextMenus.removeAll(createItemsMenu));
+
+/**
+ * Задать настройки по умолчанию после установки расширения
+ */
+chrome.runtime.onInstalled.addListener(details => {
+    if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+        let params = new Object();
+
+        itemsId.forEach(el => params['settings_' + el] = true);
+
+        chrome.storage.sync.set(params);
+    }
+});
