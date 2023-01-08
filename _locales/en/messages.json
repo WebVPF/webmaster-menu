@@ -1,7 +1,7 @@
 {
     "extName": {"message": "Webmaster menu"},
     "extDescription": {"message": "Adds new items to browser context menu that open various analyzes of browsed web pages and sites."},
-    
+
     "itemsMenu_pagespeed": {"message": "Open Google PageSpeed"},
     "itemsMenu_validHTML": {"message": "HTML validator"},
     "itemsMenu_validCSS": {"message": "CSS validator"},
