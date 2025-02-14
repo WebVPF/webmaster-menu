@@ -12,7 +12,7 @@ const optionsApp = {
         'robotsTxt'
     ],
 
-    $btnSave: document.querySelector('#save'),
+    $btnSave: document.getElementById('save'),
 
     event() {
         this.$btnSave.addEventListener('click', this.saveOptions.bind(this));
@@ -28,20 +28,20 @@ const optionsApp = {
     },
 
     install() {
-        const keyStorage = this.keyId.map(el => 'settings_' + el);
+        const keyStorage = this.keyId.map(el => `settings_${ el }`);
 
         chrome.storage.sync.get(keyStorage, params => {
-            optionsApp.keyId.forEach(el => params['settings_' + el] ? document.querySelector('#item_' + el + '_on').checked = true : document.querySelector('#item_' + el + '_off').checked = true);
+            optionsApp.keyId.forEach(el => params[`settings_${ el }`] ? document.querySelector(`#item_${ el }_on`).checked = true : document.querySelector(`#item_${ el }_off`).checked = true);
         });
     },
 
     saveOptions() {
-        let params = new Object();
+        let params = {};
 
-        this.keyId.forEach(el => params['settings_' + el] = document.querySelector('#item_' + el + '_on').checked);
+        this.keyId.forEach(el => params[`settings_${ el }`] = document.querySelector(`#item_${ el }_on`).checked);
 
         chrome.storage.sync.set(params, () => {
-            let status = document.querySelector('#status');
+            let status = document.getElementById('status');
             status.textContent = chrome.i18n.getMessage('settingsSaveStatus');
             status.style.display = 'block';
 

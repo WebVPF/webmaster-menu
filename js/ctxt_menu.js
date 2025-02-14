@@ -11,7 +11,7 @@ const itemsId = [
     'robotsTxt'
 ];
 
-function openPageAnalysis (info, tab) {
+function openPageAnalysis(info, tab) {
     let url,
         paramsUrl = tab.url.match(/(^https?):\/\/(([^/]+).*)/); // [url, protocol, patch, domen]
 
@@ -32,14 +32,14 @@ function openPageAnalysis (info, tab) {
 }
 
 function createItemsMenu() {
-    const keyStorage = itemsId.map(el => 'settings_' + el);
+    const keyStorage = itemsId.map(el => `settings_${ el }`);
 
-    chrome.storage.sync.get(keyStorage, function (result) {
+    chrome.storage.sync.get(keyStorage, result => {
         itemsId.forEach(el => {
-            if (result[`settings_${el}`]) {
+            if (result[`settings_${ el }`]) {
                 chrome.contextMenus.create({
                     id: el,
-                    title: chrome.i18n.getMessage(`itemsMenu_${el}`),
+                    title: chrome.i18n.getMessage(`itemsMenu_${ el }`),
                     contexts: ['all'],
                     documentUrlPatterns: ['http://*/*', 'https://*/*']
                 })
@@ -62,9 +62,9 @@ chrome.storage.onChanged.addListener(() => chrome.contextMenus.removeAll(createI
  */
 chrome.runtime.onInstalled.addListener(details => {
     if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
-        let params = new Object();
+        let params = {};
 
-        itemsId.forEach(el => params['settings_' + el] = true);
+        itemsId.forEach(el => params[`settings_${ el }`] = true);
 
         chrome.storage.sync.set(params);
     }
