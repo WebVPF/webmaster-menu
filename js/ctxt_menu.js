@@ -28,7 +28,7 @@ function openPageAnalysis (info, tab) {
         case 'robotsTxt':      url = `${paramsUrl[1]}://${paramsUrl[3]}/robots.txt`; break;
     }
 
-    if (url) window.open(url);
+    if (url) chrome.tabs.create({ url });
 }
 
 function createItemsMenu() {
