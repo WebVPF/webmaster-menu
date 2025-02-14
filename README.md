@@ -2,7 +2,7 @@
 
 **Extension for Browser Chrome**
 
-Chrome Market Extension Page: [chrome.google.com](https://chrome.google.com/webstore/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc)
+Chrome Market Extension Page: [chrome.google.com](https://chromewebstore.google.com/detail/webmaster-menu/bjnkfhenfiekcfbkgpkblcbldphjkldc)
 
 For browsers Opera and Yandex: [addons.opera.com](https://addons.opera.com/ru/extensions/details/webmaster-menu/)
 
