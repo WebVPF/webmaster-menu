@@ -39,7 +39,7 @@ function createItemsMenu() {
             if (result[`settings_${ el }`]) {
                 chrome.contextMenus.create({
                     id: el,
-                    title: chrome.i18n.getMessage(`itemsMenu_${ el }`),
+                    title: chrome.i18n.getMessage(`itemMenu_${ el }`),
                     contexts: ['all'],
                     documentUrlPatterns: ['http://*/*', 'https://*/*']
                 })
