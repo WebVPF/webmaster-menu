@@ -13,10 +13,8 @@
     "itemsMenu_searchYandex": {"message": "Pages site in Yandex Search"},
     "itemsMenu_robotsTxt": {"message": "Open robots.txt"},
 
-    "settingsTitle": {"message": "Options - Webmaster context menu"},
-    "settingsH1": {"message": "Menu items"},
-    "settingsLabelOn": {"message": "ON"},
-    "settingsLabelOff": {"message": "OFF"},
+    "on": {"message": "ON"},
+    "off": {"message": "OFF"},
     "settingsBtnSave": {"message": "Save settings"},
-    "settingsSaveStatus": {"message": "Options saved"}
+    "msgSettingsSave": {"message": "Options saved"}
 }

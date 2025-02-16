@@ -1,4 +1,6 @@
 const optionsApp = {
+    btnSave: document.getElementById('btn_save'),
+
     keyId: [
         'pagespeed',
         'validHTML',
@@ -12,45 +14,54 @@ const optionsApp = {
         'robotsTxt'
     ],
 
-    $btnSave: document.getElementById('save'),
-
     event() {
-        this.$btnSave.addEventListener('click', this.saveOptions.bind(this));
+        this.btnSave.addEventListener('click', this.saveOptions.bind(this));
+
+        document.querySelectorAll('input[name="settings"]').forEach(inputEl => {
+            inputEl.addEventListener('input', () => {
+                this.btnSave.removeAttribute('disabled');
+            });
+        });
     },
 
-    text() {
-        document.querySelector('title').textContent = chrome.i18n.getMessage("settingsTitle");
-        document.querySelector('h1').textContent = chrome.i18n.getMessage("settingsH1");
-        document.querySelectorAll('.switch-label-on').forEach(item => item.textContent = chrome.i18n.getMessage("settingsLabelOn"));
-        document.querySelectorAll('.switch-label-off').forEach(item => item.textContent = chrome.i18n.getMessage("settingsLabelOff"));
-        this.$btnSave.textContent = chrome.i18n.getMessage("settingsBtnSave");
-        document.querySelectorAll('.item__text').forEach((item, index) => item.textContent = chrome.i18n.getMessage('itemsMenu_' + this.keyId[index]));
+    translate() {
+        document.querySelectorAll('[data-lang]').forEach(str => {
+            str.textContent = chrome.i18n.getMessage(str.dataset.lang);
+
+            str.removeAttribute('data-lang');
+        });
     },
 
     install() {
         const keyStorage = this.keyId.map(el => `settings_${ el }`);
 
-        chrome.storage.sync.get(keyStorage, params => {
-            optionsApp.keyId.forEach(el => params[`settings_${ el }`] ? document.querySelector(`#item_${ el }_on`).checked = true : document.querySelector(`#item_${ el }_off`).checked = true);
+        chrome.storage.sync.get(keyStorage).then((result) => {
+            for (const key in result) {
+                if (typeof result[key] === 'boolean' && result[key]) {
+                    let elId = key.replace('settings_', '');
+                    document.getElementById(elId).setAttribute('checked', true);
+                }
+            }
         });
     },
 
     saveOptions() {
         let params = {};
 
-        this.keyId.forEach(el => params[`settings_${ el }`] = document.querySelector(`#item_${ el }_on`).checked);
+        this.keyId.forEach(keyEl => params[`settings_${ keyEl }`] = document.getElementById(keyEl).checked);
 
         chrome.storage.sync.set(params, () => {
-            let status = document.getElementById('status');
-            status.textContent = chrome.i18n.getMessage('settingsSaveStatus');
-            status.style.display = 'block';
+            this.btnSave.setAttribute('disabled', true);
 
-            window.setTimeout(() => status.style.display = 'none', 750);
+            let flashMessage = document.querySelector('.flash-message');
+            flashMessage.classList.add('in');
+
+            setTimeout(() => flashMessage.classList.remove('in'), 1000);
         });
     },
 
     init() {
-        this.text();
+        this.translate();
         this.install();
         this.event();
     }

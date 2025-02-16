@@ -1,0 +1,100 @@
+html[data-theme="dark"] {
+    --switch-bgc-on: #238636;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 26px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+}
+.switch input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    z-index: 10;
+}
+.switch input {
+    margin: 4px 0 0;
+    line-height: normal;
+}
+.switch:has(> input:focus) > span {
+    box-shadow: 0 0 0 3px #003ba9;
+    outline: 0;
+}
+/* .switch:has(> input:focus-visible) {
+    outline: 4px solid #3fbde9;
+} */
+.switch label,
+.switch > span {
+    line-height: 23px;
+    vertical-align: middle;
+}
+.switch > span {
+    background-color: #bb2424;
+    border-radius: 20px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+.switch input:checked ~ span {
+    background-color: var(--switch-bgc-on, #76a544);
+}
+
+.switch input:checked~span span:first-of-type {
+    color: #fff;
+    display: block;
+}
+
+.switch>span span:first-of-type {
+    color: #666;
+    display: none;
+    padding-left: 13px;
+}
+.switch>span span {
+    box-sizing: border-box;
+    display: block;
+    left: -1px;
+    position: absolute;
+    top: 2px;
+    z-index: 10;
+}
+
+.switch input:checked~span span:last-of-type {
+    color: #666;
+    display: none;
+}
+
+.switch>span span:last-child {
+    color: #fff;
+    display: block;
+    left: 28px;
+}
+.switch .slide-button {
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: 42px;
+    top: 3px;
+    transition: all .1s;
+    width: 20px;
+    z-index: 9;
+}
+.switch input:checked~.slide-button {
+    right: 4px;
+}

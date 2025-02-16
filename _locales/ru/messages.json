@@ -13,10 +13,8 @@
     "itemsMenu_searchYandex": {"message": "Страницы сайта в поиске Яндекс"},
     "itemsMenu_robotsTxt": {"message": "Открыть robots.txt"},
 
-    "settingsTitle": {"message": "Настройки - Контекстное меню вебмастера"},
-    "settingsH1": {"message": "Пункты меню"},
-    "settingsLabelOn": {"message": "ВКЛ"},
-    "settingsLabelOff": {"message": "ВЫКЛ"},
-    "settingsBtnSave": {"message": "Сохранить настройки"},
-    "settingsSaveStatus": {"message": "Настройки сохранены"}
+    "on": {"message": "ВКЛ"},
+    "off": {"message": "ВЫКЛ"},
+    "txtBtnSave": {"message": "Сохранить настройки"},
+    "msgSettingsSave": {"message": "Настройки сохранены"}
 }
