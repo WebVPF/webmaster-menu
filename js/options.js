@@ -18,10 +18,29 @@ const optionsApp = {
         this.btnSave.addEventListener('click', this.saveOptions.bind(this));
 
         document.querySelectorAll('input[name="settings"]').forEach(inputEl => {
-            inputEl.addEventListener('input', () => {
-                this.btnSave.removeAttribute('disabled');
-            });
+            inputEl.addEventListener('input', this.activeBtnSave.bind(this));
         });
+    },
+
+    activeBtnSave() {
+        if (this.btnSave.hasAttribute('disabled')) {
+            this.btnSave.removeAttribute('disabled');
+
+            window.addEventListener('beforeunload', this.warningUnsavedSettings);
+        }
+    },
+
+    disableBtnSave() {
+        this.btnSave.setAttribute('disabled', true);
+
+        window.removeEventListener('beforeunload', this.warningUnsavedSettings);
+    },
+
+    /**
+     * Предупреждение о несохраненных настройках
+     */
+    warningUnsavedSettings(event) {
+        event.preventDefault();
     },
 
     translate() {
@@ -51,7 +70,7 @@ const optionsApp = {
         this.keyId.forEach(keyEl => params[`settings_${ keyEl }`] = document.getElementById(keyEl).checked);
 
         chrome.storage.sync.set(params, () => {
-            this.btnSave.setAttribute('disabled', true);
+            this.disableBtnSave();
 
             let flashMessage = document.querySelector('.flash-message');
             flashMessage.classList.add('in');

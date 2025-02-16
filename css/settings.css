@@ -84,10 +84,8 @@ button:disabled {
     padding: 10px 30px 10px 15px;
     text-align: center;
     font-size: 14px;
-    /* background: darkgreen; */
     background-color: #8da85e;
     color: #fff;
-    /* border: solid 2px #b6b6b6; */
     border-radius: 3px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, .12), 0 1px 4px rgba(0, 0, 0, .24);
 }
