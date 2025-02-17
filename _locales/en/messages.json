@@ -13,6 +13,8 @@
     "itemMenu_searchYandex": {"message": "Pages site in Yandex Search"},
     "itemMenu_robotsTxt": {"message": "Open robots.txt"},
 
+    "descNav": {"message": "Extended browser context menu for webmasters"},
+    "menu_items": {"message": "Menu Items"},
     "on": {"message": "ON"},
     "off": {"message": "OFF"},
     "settingsBtnSave": {"message": "Save settings"},

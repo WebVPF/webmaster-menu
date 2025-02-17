@@ -1,0 +1,79 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 20px;
+    background-color: var(--bgc-b, #000);
+    line-height: 0;
+    white-space: nowrap;
+}
+nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+nav ul li {
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 5px 0;
+    margin-left: -13px;
+}
+nav ul li:hover,
+nav ul li.active {
+    color: #fff;
+
+    & a svg {
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+    }
+}
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: inherit;
+    text-decoration: none;
+}
+nav ul li a .nav-icon {
+    position: relative;
+    top: -1px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+.nav-icon svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+nav ul li a .nav-label {
+    line-height: 30px;
+}
+
+
+.blockNameApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nameApp {
+    height: 27px;
+    font-size: 27px;
+    line-height: 1;
+    color: #3498db;
+}
+.descApp {
+    font-size: 12px;
+    line-height: 1;
+}

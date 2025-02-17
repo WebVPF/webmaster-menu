@@ -13,6 +13,8 @@
     "itemMenu_searchYandex": {"message": "Страницы сайта в поиске Яндекс"},
     "itemMenu_robotsTxt": {"message": "Открыть robots.txt"},
 
+    "descNav": {"message": "Расширенное контекстное меню браузера для вебмастеров"},
+    "menu_items": {"message": "Пункты меню"},
     "on": {"message": "ВКЛ"},
     "off": {"message": "ВЫКЛ"},
     "txtBtnSave": {"message": "Сохранить настройки"},
